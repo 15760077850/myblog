@@ -1,0 +1,51 @@
+body{
+    background-color: black;
+}
+.login{
+    height: 400px;
+    background-color: white;
+    margin:-40px auto;
+}
+.navbar-nav{
+    margin: auto;
+
+
+}
+.nav-item:hover{
+    color: #1A8BE8;
+
+}
+.navbar-nav:first-child .nav-link{
+
+    font-size: 20px;
+}
+.navbar-nav:last-child .nav-link{
+
+    font-size: 20px;
+}
+.suiyi{
+    border-bottom: rgba(21, 147, 168, 0.29) 1px solid;
+    margin-bottom: 20px;
+}
+.suiyi form{
+    margin:auto;
+}
+.login input{
+    width: 70%;
+display: inline-block;
+}
+.logoImg{
+    width: 600px;
+    height: 200px;
+}
+.loginButton{
+    margin-left: 70%;
+}
+form>div{
+    margin-top: 20px;
+    padding-left: 30px;
+}
+.caozuo{
+    margin-top: 20px;
+}
+

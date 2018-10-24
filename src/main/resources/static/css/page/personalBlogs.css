@@ -1,0 +1,140 @@
+
+/*博客摘要字体*/
+p{
+    color: #797b7c;
+}
+
+/*轮播照片*/
+.mainImg img{
+    width: 100%;
+}
+.mainImg{
+    margin-left: -30px;
+    margin-right: -30px;
+}
+/*主体*/
+.main{
+    margin-top: 15px;
+}
+/*博客简要展示*/
+.blogBrief{
+    height: 150px;
+    background-color: white;
+    padding: 20px 15px 20px 0px;
+    position: relative;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.15);
+    position: relative;
+}
+
+.blogicon{
+    font-size: 14px;
+}
+.blog-img{
+    padding-right: 0px;
+}
+.icon-zuire{
+    color: red;
+}
+.icon-zuixin{
+    color: green;
+}
+/*.blogBrief btn{*/
+/*margin-right: 0px !important;*/
+/*}*/
+.forpage{
+    margin: 30px auto;
+
+}
+.page-link{
+    color: black;
+}
+/*主体右部词条展示*/
+.rank{
+    padding-left: 30px;
+}
+.rank>.row{
+    margin-bottom: 15px;
+}
+.rank i{
+    font-size: 22px;
+}
+.hotblog{
+    height: 250px;
+}
+.hotblog td{
+    padding: 4px;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.badge{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.hottag{
+    height: 200px;
+}
+.hottagName{
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.26);
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+
+}
+.hotblogger{
+    background-color: white;
+}
+.hotblogger img{
+
+    margin: 5px;
+}
+.hotblogger img:hover{
+    transform: scale(1.1);
+}
+.img-circle{
+    -webkit-border-radius:500px;
+    -moz-border-radius:500px;
+    border-radius:500px;
+}
+.qr img{
+    margin: auto;
+}
+
+
+
+.content{
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.contenthead{
+    margin-top: 70px;
+}
+.bgimage{
+    background: url("../../image/bg-title.png") no-repeat center;
+    background-size: 1920px auto;
+    height: 100px;
+    /*display:block;*/
+}
+.blogName{
+    line-height: 100px;
+}
+.attention{
+    position: relative;
+}
+.attention>button{
+    position: absolute;
+    top:30%;
+
+}
+.bloggerInfo{
+    padding-bottom: 15px;
+    text-align: center;
+}
+.orderWays .nav{
+    float: right;
+}
+.caozuo{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+}

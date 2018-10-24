@@ -1,0 +1,70 @@
+.content{
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+/*blog详情*/
+/*博客词条*/
+.blogEntry{
+    padding-left: 30px;
+}
+
+.blogEntry>.row{
+    margin-bottom: 15px;
+}
+.blogEntry2{
+    position:fixed;
+    bottom:0px;
+    top:auto;
+    right: 7.7%;
+    width: 380px;
+    z-index:998;
+}
+.attention{
+    position: relative;
+}
+.attention>button{
+    position: absolute;
+    top:30%;
+
+}
+.bloggerInfo{
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.hottag{
+    height: 100px;
+}
+.hottag>span{
+    margin: 2px;
+}
+.hottagName{
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.26);
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+
+}
+.hotblogger img{
+    margin: 2px 0 2px 0;
+}
+.hotblogger img:hover{
+    transform: scale(1.1);
+}
+.hotGuanzhu{
+}
+.readHot{
+    font-size: 8px;
+}
+.yongyong{
+    position: relative;
+}
+.icon-quanping1{
+    font-size: 30px;
+    opacity: 0.1;
+    position: fixed;
+    top:100px;
+    left:60%;
+    z-index: 999;
+}

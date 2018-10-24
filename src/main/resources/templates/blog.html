@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客详情</title>
+    <link rel="icon" href="image/1.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="image/1.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+
+    <link rel="stylesheet" href="editor/css/editormd.css">
+    <link rel="stylesheet" href="css/page/blog.css">
+    <link rel="stylesheet" href="css/conmen.css">
+</head>
+<body>
+<!--导航栏-->
+<div class="head container-fluid">
+    <nav class="container headcontent navbar navbar-expand-sm navbar-dark">
+        <img src="image/logo.png" alt="" class="logo">&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">最新</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">最热</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">待定</a>
+            </li>
+        </ul>
+        <div class="input-group  col-md-4 search">
+            <input type="text" class="form-control "><button class="input-group-addon btn text-white ">搜索</button>
+        </div>
+
+        <div class="dropdown personEdit">
+            <i class="iconfont icon-person text-white dropdown-toggle"  data-toggle="dropdown"></i>
+            <div class="dropdown-menu ">
+                <a class="dropdown-item" href="personInfo.html">个人信息</a>
+                <a class="dropdown-item" href="#">设置</a>
+                <a class="dropdown-item" href="#">写博客</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">退出</a>
+            </div>
+
+        </div>
+        <span class="text-white personname">赵宇的博客</span>
+    </nav>
+
+</div>
+<!--主体-->
+<div class="content container">
+
+    <div class="row ">
+        <!--博客正文-->
+        <div class="blogInfo col-md-8 bg-white ss">
+            <i class="iconfont icon-quanping1"></i>
+            <!--显示博客-->
+            <div class="row">
+                <div class="col-md-12" id="test-editormd">
+                    <p class="h2 text-center">标题</p>
+                    <span class="text-muted">2017年07月06日&nbsp;&nbsp;20:50:51&nbsp;&nbsp;&nbsp;&nbsp;zhaoyu&nbsp;&nbsp;&nbsp;&nbsp;阅读数：1650</span>
+                    <hr>
+                    <p class="text-muted" style="font-size: 10px">版权声明：本文为博主原创文章，未经博主允许不得转载。</p>
+                    <textarea class="editormd-html-textarea" name="html">
+
+![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+
+**目录 (Table of Contents)**
+
+[TOCM]
+
+[TOC]
+
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+# Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+## Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+### Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+#### Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
+##### Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+###### Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+
+#### 标题（用底线的形式）Heading (underline)
+
+This is an H1
+=============
+
+This is an H2
+-------------
+
+### 字符效果和横线等
+
+----
+
+~~删除线~~ <s>删除线（开启识别HTML标签时）</s>
+*斜体字*      _斜体字_
+**粗体**  __粗体__
+***粗斜体*** ___粗斜体___
+
+上标：X<sub>2</sub>，下标：O<sup>2</sup>
+
+**缩写(同HTML的abbr标签)**
+
+> 即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启
+
+The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
+
+### 引用 Blockquotes
+
+> 引用文本 Blockquotes
+
+引用的行内混合 Blockquotes
+
+> 引用：如果想要插入空白换行`即<br />标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](http://localhost/)。
+
+### 锚点与链接 Links
+
+[普通链接](http://localhost/)
+
+[普通链接带标题](http://localhost/ "普通链接带标题")
+
+直接链接：<https://github.com>
+
+[锚点链接][anchor-id]
+
+[anchor-id]: http://www.this-anchor-link.com/
+
+[mailto:test.test@gmail.com](mailto:test.test@gmail.com)
+
+GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com
+
+> @pandao
+
+### 多语言代码高亮 Codes
+
+#### 行内代码 Inline code
+
+执行命令：`npm install marked`
+
+#### 缩进风格
+
+即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
+
+                            <?php
+        echo "Hello world!";
+    ?>
+
+                            预格式化文本：
+
+    | First Header  | Second Header |
+    | ------------- | ------------- |
+    | Content Cell  | Content Cell  |
+    | Content Cell  | Content Cell  |
+
+#### JS代码　
+
+```javascript
+function test() {
+	console.log("Hello world!");
+}
+
+(function(){
+    var box = function() {
+        return box.fn.init();
+    };
+
+    box.prototype = box.fn = {
+        init : function(){
+            console.log('box.init()');
+
+			return this;
+        },
+
+		add : function(str) {
+			alert("add", str);
+
+			return this;
+		},
+
+		remove : function(str) {
+			alert("remove", str);
+
+			return this;
+		}
+    };
+
+    box.fn.init.prototype = box.fn;
+
+    window.box =box;
+})();
+
+var testBox = box();
+testBox.add("jQuery").remove("jQuery");
+```
+
+#### HTML 代码 HTML codes
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charest="utf-8" />
+        <meta name="keywords" content="Editor.md, Markdown, Editor" />
+        <title>Hello world!</title>
+        <style type="text/css">
+            body{font-size:14px;color:#444;font-family: "Microsoft Yahei", Tahoma, "Hiragino Sans GB", Arial;background:#fff;}
+            ul{list-style: none;}
+            img{border:none;vertical-align: middle;}
+        </style>
+    </head>
+    <body>
+        <h1 class="text-xxl">Hello world!</h1>
+        <p class="text-green">Plain text</p>
+    </body>
+</html>
+```
+
+### 图片 Images
+
+Image:
+
+![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+
+> Follow your heart.
+
+![](https://pandao.github.io/editor.md/examples/images/8.jpg)
+
+> 图为：厦门白城沙滩
+
+图片加链接 (Image + Link)：
+
+[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/images/7.jpg "李健首张专辑《似水流年》封面")
+
+> 图为：李健首张专辑《似水流年》封面
+
+----
+
+### 列表 Lists
+
+#### 无序列表（减号）Unordered Lists (-)
+
+- 列表一
+- 列表二
+- 列表三
+
+#### 无序列表（星号）Unordered Lists (*)
+
+* 列表一
+* 列表二
+* 列表三
+
+#### 无序列表（加号和嵌套）Unordered Lists (+)
+
++ 列表一
++ 列表二
+    + 列表二-1
+    + 列表二-2
+    + 列表二-3
++ 列表三
+    * 列表一
+    * 列表二
+    * 列表三
+
+#### 有序列表 Ordered Lists (-)
+
+1. 第一行
+2. 第二行
+3. 第三行
+
+#### GFM task list
+
+- [x] GFM task list 1
+- [x] GFM task list 2
+- [ ] GFM task list 3
+    - [ ] GFM task list 3-1
+    - [ ] GFM task list 3-2
+    - [ ] GFM task list 3-3
+- [ ] GFM task list 4
+    - [ ] GFM task list 4-1
+    - [ ] GFM task list 4-2
+
+----
+
+### 绘制表格 Tables
+
+| 项目        | 价格   |  数量  |
+| --------   | -----:  | :----:  |
+| 计算机      | $1600   |   5     |
+| 手机        |   $12   |   12   |
+| 管线        |    $1    |  234  |
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+| Function name | Description                    |
+| ------------- | ------------------------------ |
+| `help()`      | Display the help window.       |
+| `destroy()`   | **Destroy your computer!**     |
+
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+
+| Item      | Value |
+| --------- | -----:|
+| Computer  | $1600 |
+| Phone     |   $12 |
+| Pipe      |    $1 |
+
+----
+
+#### 特殊符号 HTML Entities Codes
+
+&copy; &  &uml; &trade; &iexcl; &pound;
+&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot;
+
+X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
+
+18&ordm;C  &quot;  &apos;
+
+[========]
+
+### Emoji表情 :smiley:
+
+> Blockquotes :star:
+
+#### GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:
+
+- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;
+- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;
+- [x] [ ] :smiley: this is a complete item :smiley:;
+- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao;
+- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;
+    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
+    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
+
+#### 反斜杠 Escape
+
+\*literal asterisks\*
+
+[========]
+
+### 科学公式 TeX(KaTeX)
+
+$$E=mc^2$$
+
+行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。
+
+$$x > y$$
+
+$$\(\sqrt{3x-1}+(1+x)^2\)$$
+
+$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
+
+多行公式：
+
+```math
+\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)
+```
+
+```katex
+\displaystyle
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        }
+    }
+```
+
+```latex
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+```
+
+### 分页符 Page break
+
+> Print Test: Ctrl + P
+
+[========]
+
+### 绘制流程图 Flowchart
+
+```flow
+st=>start: 用户登陆
+op=>operation: 登陆操作
+cond=>condition: 登陆成功 Yes or No?
+e=>end: 进入后台
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
+[========]
+
+### 绘制序列图 Sequence Diagram
+
+```seq
+Andrew->China: Says Hello
+Note right of China: China thinks\nabout it
+China-->Andrew: How are you?
+Andrew->>China: I am good thanks!
+```
+
+### End</textarea>
+                </div>
+            </div>
+            <hr>
+            <!--写评轮-->
+            <div class="row">
+                <div  class="col-md-12">
+                    <form role="form">
+                        <div class="form-group">
+                            <textarea id="comment" class="form-control" rows="1" >想对作者说点什么...</textarea>
+                            <button class="btn btn-sm btn-success float-right">发表评论</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--评论列表-->
+            <div class="row">
+                <div  class="col-md-12">
+                    <table class="table">
+                        <tr style="border-bottom: 1px dashed #eee8d5">
+                            <td>
+                                <img src="holder.js/60x60" class="rounded-circle">&nbsp;&nbsp;&nbsp;<span>赵宇</span><span>:</span><span>万里长征刚开始，感谢分享</span><span class="text-info">(19秒前&nbsp;&nbsp;&nbsp;#21楼)</span>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px dashed #eee8d5">
+                            <td>
+                                <img src="holder.js/60x60" class="rounded-circle">&nbsp;&nbsp;&nbsp;<span>赵宇</span><span>:</span><span>万里长征刚开始，感谢分享</span><span class="text-info">(19秒前&nbsp;&nbsp;&nbsp;#21楼)</span>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px dashed #eee8d5">
+                            <td>
+                                <img src="holder.js/60x60" class="rounded-circle">&nbsp;&nbsp;&nbsp;<span>赵宇</span><span>:</span><span>万里长征刚开始，感谢分享</span><span class="text-info">(19秒前&nbsp;&nbsp;&nbsp;#21楼)</span>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px dashed #eee8d5">
+                            <td>
+                                <img src="holder.js/60x60" class="rounded-circle">&nbsp;&nbsp;&nbsp;<span>赵宇</span><span>:</span><span>万里长征刚开始，感谢分享</span><span class="text-info">(19秒前&nbsp;&nbsp;&nbsp;#21楼)</span>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px dashed #eee8d5">
+                            <td>
+                                <img src="holder.js/60x60" class="rounded-circle">&nbsp;&nbsp;&nbsp;<span>赵宇</span><span>:</span><span>万里长征刚开始，感谢分享</span><span class="text-info">(19秒前&nbsp;&nbsp;&nbsp;#21楼)</span>
+                            </td>
+                        </tr>
+                        <tr style="border-bottom: 1px dashed #eee8d5">
+                            <td>
+                                <img src="holder.js/60x60" class="rounded-circle">&nbsp;&nbsp;&nbsp;<span>赵宇</span><span>:</span><span>万里长征刚开始，感谢分享</span><span class="text-info">(19秒前&nbsp;&nbsp;&nbsp;#21楼)</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">
+                                <a href="" class="readHot">查看热评</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!--词条部分-->
+        <div class="blogEntry col-md-4 " id="blogEntry">
+                <!--排行粉丝数之类的-->
+            <div class="row bg-white">
+                <!--头像名称-->
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <img src="holder.js/80x80" class="rounded-circle"><span>赵宇</span>
+                        </div>
+                        <div class="attention col-md-4">
+                            <button class="btn btn-dark float-left">关注</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="bloggerInfo row text-danger">
+                        <div class="col-md-3">
+                            <p>创作</p>
+                            <span>123</span><span>篇</span>
+                        </div>
+                        <div class="col-md-3">
+                            <p>粉丝</p>
+                            <span>123</span>
+                        </div>
+                        <div class="col-md-3">
+                            <p>喜欢</p>
+                            <span>123</span>
+                        </div>
+                        <div class="col-md-3">
+                            <p>评论</p>
+                            <span>123</span>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row text-center">
+                        <div class="col-md-6">
+                            <p><span>等级</span><i></i>7</p>
+                            <p><span>积分</span><i></i><span>10000</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><span>访问</span><span>1111</span></p>
+                            <p><span>排名</span><span>1</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--标签-->
+            <div class="row bg-white">
+                    <div class="hottag col-md-12">
+                        <div class="hottagName">
+                            <i class="iconfont icon-biaoqian"></i><span>标签</span>
+                        </div>
+                        <span class="badge badge-success"><a href="#" class="text-white">java</a></span>
+                        <span class="badge badge-danger"><a href="#" class="text-white">危险标签</a></span>
+                        <span class="badge badge-success"><a href="#" class="text-white">html</a></span>
+                        <span class="badge badge-danger"><a href="#" class="text-white">css3</a></span>
+                        <span class="badge badge-success"><a href="#" class="text-white">java</a></span>
+                        <span class="badge badge-danger"><a href="#" class="text-white">危险标签</a></span>
+                        <span class="badge badge-success"><a href="#" class="text-white">html</a></span>
+                        <span class="badge badge-danger"><a href="#" class="text-white">css3</a></span>
+                    </div>
+            </div>
+            <!--热门博主-->
+            <div class="row bg-white">
+                <div class="hotblogger col-md-12">
+                    <div class="hottagName"><i class="iconfont icon-wodedamaijihuo"></i>&nbsp;&nbsp;<span>热门博主</span></div>
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <img src="holder.js/60x60" class="rounded-circle">
+                    <div></div>
+                </div>
+            </div>
+            <!--个人分类-->
+            <div class="row bg-white">
+                <div class="personcategory col-md-12">
+                    <table class="table table-hover">
+                        <tr>
+                            <td>java</td>
+                            <td>181篇</td>
+                        </tr>
+                        <tr>
+                            <td>css</td>
+                            <td>181篇</td>
+                        </tr>
+                        <tr>
+                            <td>script</td>
+                            <td>181篇</td>
+                        </tr>
+                        <tr>
+                            <td>java</td>
+                            <td>181篇</td>
+                        </tr>
+                        <tr>
+                            <td>css</td>
+                            <td>181篇</td>
+                        </tr>
+                        <tr>
+                            <td>css</td>
+                            <td>181篇</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--轮播显示寝室照片，占位置-->
+            <div class="row bg-white">
+                <div class="col-md-12">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+
+                        <!-- 指示符 -->
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                            <li data-target="#demo" data-slide-to="3"></li>
+                            <li data-target="#demo" data-slide-to="4"></li>
+                            <li data-target="#demo" data-slide-to="5"></li>
+                        </ul>
+
+                        <!-- 轮播图片 -->
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://static.runoob.com/images/mix/img_fjords_wide.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://static.runoob.com/images/mix/img_nature_wide.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://static.runoob.com/images/mix/img_fjords_wide.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://static.runoob.com/images/mix/img_nature_wide.jpg">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://static.runoob.com/images/mix/img_mountains_wide.jpg">
+                            </div>
+                        </div>
+
+                        <!-- 左右切换按钮 -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <!--关注我-->
+            <div class="row bg-white">
+                <div class="hotGuanzhu col-md-12 text-center">
+                    <div class="hottagName text-left"><i class="iconfont icon-wodedamaijihuo"></i>&nbsp;&nbsp;<span>关注我</span></div>
+                    <img src="image/timg.jpg" width="200" height="200">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--地址及备案申明-->
+<div class="foot container-fluid text-center">
+    <p class="quanxian"><span class="text-white ">Copyright © 2018 Adobe 11she326.cn All Rights Reserved.射洪吴彦祖 版权所有,保留一切权利</span></p>
+    <p class="beian"><span class="text-white">蜀ICP备18027826号</span></p>
+</div>
+<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/holder.js" type="text/javascript"></script>
+<script src="js/conmen.js" type="text/javascript"></script>
+<script src="js/page/blog.js" type="text/javascript"></script>
+<script src="editor/lib/marked.min.js"></script>
+<script src="editor/lib/prettify.min.js"></script>
+<script src="editor/lib/raphael.min.js"></script>
+<script src="editor/lib/underscore.min.js"></script>
+<script src="editor/lib/sequence-diagram.min.js"></script>
+<script src="editor/lib/flowchart.min.js"></script>
+<script src="editor/lib/jquery.flowchart.min.js"></script>
+<script src="editor/editormd.js"></script>
+</body>
+</html>

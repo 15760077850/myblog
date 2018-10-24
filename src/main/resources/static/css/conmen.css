@@ -1,0 +1,71 @@
+
+body{
+    background-color: #efefef;
+}
+/*每个页面的顶部和底部的css效果*/
+/*导航栏*/
+.head{
+    background-color: black;
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+}
+.headcontent{
+    height: 60px;
+    margin-bottom: 10px;
+}
+.logo{
+    height: 100%;
+}
+.navbar-nav:hover{
+    color: white;
+}
+.navbar-nav .nav-item{
+    margin-left: 1rem;
+}
+.search{
+    margin-left: 10rem;
+}
+.search button{
+    background-color: black;
+}
+.search button:hover{
+    background-color: grey;
+}
+.icon-person{
+    font-size:30px;
+    float: right;
+}
+.personEdit{
+    position: absolute;
+    right: 8rem;
+}
+.personEdit .dropdown-menu{
+    opacity: 0.8;
+}
+.personname{
+    position: absolute;
+    right: 2rem;
+}
+/*每个页面的顶部和底部的css效果*/
+
+
+/*foot针对底部备案地址申明*/
+.foot{
+    background-color: black;
+    position: relative;
+    bottom: 0px;
+}
+.beian{
+    margin-bottom: 0;
+}
+/*foot针对底部备案地址申明*/
+a:active{
+    text-decoration:none;
+}
+a:hover{
+    text-decoration:none;
+}
+.icon-grey{
+    color:grey;
+}

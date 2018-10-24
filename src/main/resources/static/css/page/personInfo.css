@@ -1,0 +1,47 @@
+.content{
+    margin-top: 90px;
+}
+/*左侧头像以及东西*/
+.personImg{
+    width: 100%;
+    background-color: white;
+    text-align: center;
+}
+.personSelect a:hover{
+    background-color: #c0c0c0;
+}
+.personSelect a:nth-child(1){
+    background-color: grey;
+
+}
+.personInfo{
+    width: 100%;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 7px;
+    position: relative;
+
+}
+.personInfo ul{
+    list-style: none;
+}
+
+.personInfo ul li{
+  margin-top: 4px;
+}
+.personMain{
+    float: right;
+    margin-right: 40px;
+}
+.updateInfo{
+    position: absolute;
+    top: 300px;
+    right: 30px;
+}
+.layerInfo .form-group{
+    margin: 20px;
+}
+.foot{
+    position: fixed!important;
+    bottom: 0px!important;
+}
