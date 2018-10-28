@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="icon" href="../static/image/1.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="../static/image/1.ico" type="image/x-icon"/>
-    <link rel="stylesheet" href="../static/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/css/page/admin.css">
+    <link rel="icon" href="../static/image/1.ico" type="image/x-icon" th:href="@{image/1.ico}"/>
+    <link rel="shortcut icon" href="../static/image/1.ico" th:href="@{image/1.ico}" type="image/x-icon"/>
+    <link rel="stylesheet" href="../static/css/bootstrap.css" th:href="@{css/bootstrap.css}">
+    <link rel="stylesheet" href="../static/css/page/admin.css" th:href="@{css/page/admin.css}">
 
-    <link rel="stylesheet" href="../static/css/conmen.css">
+    <link rel="stylesheet" href="../static/css/conmen.css" th:href="@{css/conmen.css}">
 </head>
 <body>
 <!--导航栏-->
@@ -255,12 +255,12 @@
     </p>
     <p class="beian"><span class="text-white">蜀ICP备18027826号</span></p>
 </div>
-<script src="../static/js/jquery-3.3.1.js" type="text/javascript"></script>
+<script src="../static/js/jquery-3.3.1.js" type="text/javascript" th:src="@{js/jquery-3.3.1.js}"></script>
 
-<script src="../static/js/layer/layer.js" type="text/javascript"></script>
-<script src="../static/js/bootstrap.js" type="text/javascript"></script>
-<script src="../static/js/holder.js" type="text/javascript"></script>
-<script src="../static/js/conmen.js" type="text/javascript"></script>
-<script src="../static/js/page/admin.js" type="text/javascript"></script>
+<script src="../static/js/layer/layer.js" type="text/javascript" th:src="@{js/layer/layer.js}"></script>
+<script src="../static/js/bootstrap.js" type="text/javascript" th:src="@{js/bootstrap.js}"></script>
+<script src="../static/js/holder.js" type="text/javascript" th:src="@{js/holder.js}"></script>
+<script src="../static/js/conmen.js" type="text/javascript" th:src="@{js/conmen.js}"></script>
+<script src="../static/js/page/admin.js" type="text/javascript" th:src="@{js/page/admin.js}"></script>
 </body>
 </html>

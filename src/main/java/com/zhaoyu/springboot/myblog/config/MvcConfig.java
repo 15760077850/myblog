@@ -2,12 +2,15 @@ package com.zhaoyu.springboot.myblog.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 @Configuration
-public class MvcConfig extends WebMvcConfigurerAdapter {
+public class MvcConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
+        //跳转登录页面
+        registry.addViewController("/tologin").setViewName("login");
         //跳转主页
         registry.addViewController("/index").setViewName("index");
         //博客展示页面
@@ -20,6 +23,7 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/personalBlogs").setViewName("personalBlogs");
         //个人信息
         registry.addViewController("/personInfo").setViewName("personInfo");
-
+        //管理员
+        registry.addViewController("/admin").setViewName("admin");
     }
 }
