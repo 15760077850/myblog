@@ -1,5 +1,8 @@
 package com.zhaoyu.springboot.myblog.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,6 +10,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.naming.Name;
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -18,9 +22,10 @@ public class User implements Serializable, UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;//id 主键
+    @NotEmpty(message = "账号不能为空")
     @Column(length = 40, unique = true, nullable = false)
     private String username;//账号
-    @Column(length = 20, unique = true, nullable = false)
+    @Column(length = 100, unique = true, nullable = false)
     private String password;//密码
     @Column(length = 40)
     private String name;//用户名
@@ -30,7 +35,9 @@ public class User implements Serializable, UserDetails {
     private String sex;//性别
     @Column(length = 20)
     private String realName;//真实姓名
-    @Column(length = 20)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd")
+    @Column(length = 60)
     private Date birthday;//生日
     @Column(length = 100)
     private String localtion;//区域
@@ -112,7 +119,7 @@ public class User implements Serializable, UserDetails {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = new BCryptPasswordEncoder(4).encode(password);
     }
 
     public void setBCryptPassword(String password) {

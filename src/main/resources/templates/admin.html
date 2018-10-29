@@ -60,7 +60,7 @@
     <!--用户信息表-->
     <div class="row mt-md-5">
         <div class="col-md-12">
-            <table class="table table-bordered table-hover text-center">
+            <table class="table table-bordered table-hover text-center" id="contain">
                 <thead>
                 <tr>
                     <th>id</th>
@@ -72,16 +72,16 @@
                     <th>操作</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>Doe</td>
-                    <td>Doe</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                    <td><a class="text-white btn btn-info update">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href=""
-                                                                                                   class="text-white btn btn-danger">删除</a>
+                <tbody th:remove="all-but-first">
+                <tr th:object="${user}" th:each="user:${users}">
+                    <td th:text="${userStat.count}">John</td>
+                    <td th:text="*{username}">Doe</td>
+                    <td th:text="*{name}">Doe</td>
+                    <td th:text="*{email}">Doe</td>
+                    <td th:text="*{sex}">Doe</td>
+                    <td th:text="*{localtion}">john@example.com</td>
+                    <td><a th:attr="userid=*{id}" class="blog-update-user text-white btn btn-info update">修改</a>&nbsp;&nbsp;&nbsp;&nbsp;<a
+                            th:attr="userid=*{id}" class="blog-delete-user text-white btn btn-danger">删除</a>
                     </td>
                 </tr>
                 <tr>
@@ -154,89 +154,6 @@
             </table>
         </div>
     </div>
-    <!--<div class="container bg-white">-->
-    <!--<div class="row ">-->
-    <!--<div class="col-md-12">-->
-    <!--<form class="text-center">-->
-    <!--<div class="text-center mb-md-4">-->
-    <!--<img src="holder.js/80x80" class="rounded-circle">-->
-    <!--</div>-->
-    <!--<div class="form-group row">-->
-    <!--<label for="username" class="col-md-2 control-label">账号</label>-->
-    <!--<div class="col-md-10">-->
-    <!--<input type="text" class="form-control" id="username" placeholder="账号" readonly="readonly">-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group row">-->
-    <!--<label for="name" class="col-md-2 control-label">用户名</label>-->
-    <!--<div class="col-md-10">-->
-    <!--<input type="text" class="form-control" id="name" placeholder="用户名" >-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group row">-->
-    <!--<label for="email" class="col-md-2 control-label">邮箱</label>-->
-    <!--<div class="col-md-10">-->
-    <!--<input type="email" class="form-control" id="email" placeholder="邮箱" >-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group row">-->
-    <!--<label  class="col-md-2 control-label">性别</label>-->
-    <!--<div class="col-md-4">-->
-    <!--<label class="radio-inline"><input type="radio" name="sex">男</label>-->
-    <!--<label class="radio-inline"><input type="radio" name="sex">女</label>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group row">-->
-    <!--<label for="realName" class="col-md-2 control-label">真实姓名</label>-->
-    <!--<div class="col-md-10">-->
-    <!--<input type="text" class="form-control" id="realName" placeholder="真实姓名" >-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group row">-->
-    <!--<label for="birthday" class="col-md-2 control-label">生日</label>-->
-    <!--<div class="col-md-4">-->
-    <!--<input type="date" class="form-control" id="birthday" placeholder="生日" >-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group row">-->
-    <!--<label for="localtion" class="col-md-2 control-label">区域</label>-->
-    <!--<div class="col-md-10">-->
-    <!--<input type="text" class="form-control" id="localtion" placeholder="区域" >-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group row">-->
-    <!--<label for="trade" class="col-md-2 control-label">行业</label>-->
-    <!--<div class="col-md-10">-->
-    <!--<input type="text" class="form-control" id="trade" placeholder="行业" >-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group row">-->
-    <!--<label for="position" class="col-md-2 control-label">职位</label>-->
-    <!--<div class="col-md-10">-->
-    <!--<input type="text" class="form-control" id="position" placeholder="职位" >-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="form-group row">-->
-    <!--<label for="position" class="col-md-2 control-label">职位</label>-->
-    <!--<div class="col-md-3">-->
-    <!--<select class="form-control" id="sel1">-->
-    <!--<option selected="selected">用户</option>-->
-    <!--<option>管理员</option>-->
-    <!--</select>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="form-group row">-->
-    <!--<div class="offset-10 col-md-2">-->
-    <!--<button type="submit" class="btn btn-info">修改</button>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</form>-->
-    <!--</div>-->
-
-    <!--</div>-->
-    <!--</div>-->
     <div class="row mt-md-1">
         <div class="m-auto">
             <ul class="pagination ">

@@ -23,7 +23,6 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addViewController("/personalBlogs").setViewName("personalBlogs");
         //个人信息
         registry.addViewController("/personInfo").setViewName("personInfo");
-        //管理员
-        registry.addViewController("/admin").setViewName("admin");
+
     }
 }

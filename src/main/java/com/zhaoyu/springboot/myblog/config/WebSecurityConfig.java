@@ -36,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception { //配置策略
         http.csrf().disable();
         http.authorizeRequests().
-                antMatchers("/css/**", "/js/**", "/editor/**", "/image/**", "/index").permitAll().anyRequest().authenticated().
+                antMatchers("/css/**", "/js/**", "/editor/**", "/image/**", "/index", "/**").permitAll().anyRequest().authenticated().
                 // antMatchers("/admin/**").hasRole("ADMIN").anyRequest().authenticated().// 需要相应的角色才能访问
                         and().formLogin().loginPage("/tologin").loginProcessingUrl("/login").defaultSuccessUrl("/index").permitAll().successHandler(loginSuccessHandler()).
                 and().logout().permitAll().invalidateHttpSession(true).
