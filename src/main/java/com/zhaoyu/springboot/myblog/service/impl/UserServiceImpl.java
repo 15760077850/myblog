@@ -4,6 +4,8 @@ import com.zhaoyu.springboot.myblog.domain.User;
 import com.zhaoyu.springboot.myblog.repository.UserRepository;
 import com.zhaoyu.springboot.myblog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -69,7 +71,7 @@ public class UserServiceImpl implements UserService {
     * @return  java.util.List<com.zhaoyu.springboot.myblog.domain.User>
     * @date 2018/10/28 23:11
     */
-    public List<User> selectUsers() {
-        return userRepository.findAll();
+    public Page<User> selectUsers(Pageable page) {
+        return userRepository.findAll(page);
     }
 }

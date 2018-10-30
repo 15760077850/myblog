@@ -119,7 +119,7 @@ public class User implements Serializable, UserDetails {
     }
 
     public void setPassword(String password) {
-        this.password = new BCryptPasswordEncoder(4).encode(password);
+        this.password = password;
     }
 
     public void setBCryptPassword(String password) {

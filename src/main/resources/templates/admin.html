@@ -47,7 +47,7 @@
     </nav>
 
 </div>
-<div class="content container bg-white ">
+<div class="content container bg-white" id="contain">
     <div class="row">
         <div class="offset-3 col-md-3 m-auto  mt-md-5">
             <button type="button" class="btn btn-info" id="addUser">添加</button>
@@ -154,14 +154,21 @@
             </table>
         </div>
     </div>
-    <div class="row mt-md-1">
+    <div class="row mt-md-1" th:if="${page.totalPages} >1">
         <div class="m-auto">
             <ul class="pagination ">
-                <li class="page-item"><a class="page-link" href="#">上一页</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">下一页</a></li>
+                <li class="page-item" th:classappend="${isFirst}?'disabled' : ''">
+                    <a class="page-link" href="#" th:attr="pageIndex=${page.number}-1">上一页</a>
+                </li>
+                <li class="page-item" th:each="i : ${#numbers.sequence(1, page.totalPages)}"
+                    th:classappend="${(page.number + 1) eq i} ? 'active' : ''">
+                    <a href="#" class="page-link" th:text="${i}" th:attr="pageIndex=${i} - 1"></a>
+                </li>
+                <li class="page-item" th:classappend="${isLast}?'disabled' : ''">
+                    <a class="page-link" href="#" th:attr="pageIndex=${page.number}+1">下一页</a>
+                </li>
+                <li class="page-item border-white"><a class="page-link border-white"
+                                                      th:text="${'共'+page.totalElements+'条'}">共10条</a></li>
             </ul>
         </div>
     </div>
