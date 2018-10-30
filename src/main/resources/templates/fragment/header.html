@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="header(title,links,styles)">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <th:block th:replace="${title}"></th:block>
+    <link rel="stylesheet" href="../../static/css/bootstrap.css" th:href="@{css/bootstrap.css}">
+    <link rel="stylesheet" href="../../static/css/iconfont.css" th:href="@{css/iconfont.css}">
+    <link rel="stylesheet" href="../../static/css/conmen.css" th:href="@{css/conmen.css}">
+    <th:block th:replace="${links}"></th:block>
+
+</head>
+<body>
+<!--导航栏-->
+<div class="head container-fluid">
+    <nav class="container headcontent navbar navbar-expand-sm navbar-dark">
+        <img src="image/logo.png" alt="" class="logo">&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#">最新</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">最热</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">待定</a>
+            </li>
+        </ul>
+        <div class="input-group  col-md-4 search">
+            <input type="text" class="form-control ">
+            <button class="input-group-addon btn text-white ">搜索</button>
+        </div>
+
+        <div class="dropdown personEdit">
+            <i class="iconfont icon-person text-white dropdown-toggle" data-toggle="dropdown"></i>
+            <div class="dropdown-menu ">
+                <a class="dropdown-item" href="personInfo.html">个人信息</a>
+                <a class="dropdown-item" href="#">设置</a>
+                <a class="dropdown-item" href="#">写博客</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">退出</a>
+            </div>
+
+        </div>
+        <span class="text-white personname">赵宇的博客</span>
+    </nav>
+
+</div>
+</body>
+</html>

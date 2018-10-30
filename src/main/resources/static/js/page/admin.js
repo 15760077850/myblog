@@ -214,7 +214,7 @@ $(function () {
                     '                    <div class="form-group row">\n' +
                     '                        <label for="name" class="col-md-2 control-label">用户名</label>\n' +
                     '                        <div class="col-md-10">\n' +
-                    '                            <input type="text" class="form-control" id="name" name="name" value=' + name + ' placeholder="用户名" >\n' +
+                    '                            <input type="text" class="form-control" id="name" name="name" value=' + name + '   >\n' +
                     '                        </div>\n' +
                     '                    </div>\n' +
                     '                    <div class="form-group row">\n' +
